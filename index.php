@@ -18,11 +18,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         // Example logic for user authentication
         if ($id === "12345" && $password === "password") {
-            // On successful login, redirect to another page
-            header("Location: student/studentHome.php"); // Replace with your target page
-            exit; // Stop further processing after redirect
+            switch ($user_role) {
+                case 'student':
+                    header("Location: student/studentHome.php");
+                    break;
+                case 'admin':
+                    header("Location: admin/adminHome.php");
+                    break;
+                case 'warden':
+                    header("Location: wardan/wardanHome.php");
+                    break;
+                case 'proctor':
+                    header("Location: proctor/proctorHome.php");
+                    break;
+				}
         } else {
-            $error = "⚠️ Invalid UNIQUE ID or password.";
+            $error = "⚠️ Invalid Login ID or password.";
         }
     }
 }
