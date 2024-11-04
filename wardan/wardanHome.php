@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member Login </title>
+    <title>Wardan home page</title>
 </head>
 <body>
-    i am your Main Login page
+    i am wardan home page
 </body>
 </html>
